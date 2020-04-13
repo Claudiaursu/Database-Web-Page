@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Vizualizare 2</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+    <h1>Vizualizare 2</h1>
+    <h3>Numarul de actori si numarul de obiecte de recuzita albe din toate piesele </h3>
+    <h3> in care apar obiecte de recuzita albe si in care joaca mai mult de 20 de actori </h3>
+
+    <br/><br/>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Numar actori</th>
+                <th>Titlu piesa</th>
+                <th>Numar de obiecte recuzita albe</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="piesa : ${listaPieseAlb}">
+                <td th:text="${piesa.numar_actori}">ID actor</td>
+                <td th:text="${piesa.titlu_piesa}">Nume</td>
+                <td th:text="${piesa.nr_recuzite_albe}">Numar de obiecte recuzita albe</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="/fragments/general.html :: scripts"></div>
+</body>
+</html>
