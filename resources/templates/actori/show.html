@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Actori</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+    <h1>Actori</h1>
+    <a href="/actori/new">Introduceti un actor nou</a>
+    <br/><br/>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>ID actor</th>
+                <th>Nume</th>
+                <th>Prenume</th>
+                <th>Data nasterii</th>
+                <th>Data angajarii</th>
+                <th>Tip actor</th>
+                <th>Titlu piesa</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="actor : ${listaActori}">
+                <td th:text="${actor.id_actor}">ID actor</td>
+                <td th:text="${actor.nume}">Nume</td>
+                <td th:text="${actor.prenume}">Prenume</td>
+                <td th:text="${#dates.format(actor.data_nasterii, 'dd-MMM-yyyy')}">Data nasterii</td>
+                <td th:text="${#dates.format(actor.data_angajarii, 'dd-MMM-yyyy')}">Data angajarii</td>
+                <td th:text="${actor.tip_actor}">Tip actor</td>
+                <td th:text="${actor.titlu_piesa}">Titlu piesa</td>
+                <td width="255px">
+                    <a class="text-primary" th:href="@{'/actori/edit/' + ${actor.id_actor}}">Editeaza actor</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a class="text-danger" th:href="@{'/actori/delete/' + ${actor.id_actor}}">Sterge actor</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="/fragments/general.html :: scripts"></div>
+</body>
+</html>
