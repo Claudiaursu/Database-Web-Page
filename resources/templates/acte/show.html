@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Categoria: Acte</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+    <h1>Acte</h1>
+    <a href="/acte/new">Introduceti un act nou</a>
+    <br/><br/>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>ID act</th>
+                <th>Durata</th>
+                <th>Titlu piesa</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="act : ${listaActe}">
+                <td th:text="${act.id_act}">ID act</td>
+                <td th:text="${act.durata}">Durata</td>
+                <td th:text="${act.titlu_piesa}">Titlu piesa</td>
+                <td width="255px">
+                    <a class="text-primary" th:href="@{'/acte/edit/' + ${act.id_act}}">Editeaza actul</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a class="text-danger" th:href="@{'/acte/delete/' + ${act.id_act}}">Sterge actul</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="/fragments/general.html :: scripts"></div>
+
+</body>
+</html>
