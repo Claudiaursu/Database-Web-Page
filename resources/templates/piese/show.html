@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Categoria: Piese</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+    <h1>Piese de opera</h1>
+    <a href="/piese/new">Introduceti o piesa noua</a>
+    <br/><br/>
+    <div class="container">
+        <table  class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>Titlu piesa</th>
+                <th>Gen</th>
+                <th>Nr reprezentatii pe luna</th>
+                <th>Pret bilet</th>
+                <th>Regizor</th>
+                <th>Numar pauze</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="piesa_opera : ${lista_opere}">
+                <td th:text="${piesa_opera.titlu_piesa}">Titlu piesa</td>
+                <td th:text="${piesa_opera.gen_piesa}">Gen</td>
+                <td th:text="${piesa_opera.nr_reprez_luna}">Nr reprezentatii pe luna</td>
+                <td th:text="${piesa_opera.pret_bilet}">Pret bilet</td>
+                <td th:text="${piesa_opera.nume} + ' ' +  ${piesa_opera.prenume}">Regizor</td>
+                <td th:text="${piesa_opera.nr_pauze}">Numar pauze</td>
+                <td width="255px">
+                    <a class="text-primary" th:href="@{'/piese/edit/' + ${piesa_opera.titlu_piesa}}">Editeaza piesa</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a class="text-danger" th:href="@{'/piese/delete/' + ${piesa_opera.titlu_piesa}}">Sterge piesa</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div th:replace="/fragments/general.html :: scripts"></div>
+</body>
+</html>
