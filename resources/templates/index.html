@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Management Opera</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+    <link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+
+    <br/><br/>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mb-4" onclick="window.location='piese';">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/45258/ballet-production-performance-don-quixote-45258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Piese</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='acte';">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/713149/pexels-photo-713149.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Acte</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='regizori';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1505682634904-d7c8d95cdc50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Regizori</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='actori';">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/358010/pexels-photo-358010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Actori</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='obiecte_vestimentare';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1509067917181-3ec8d8ef5170?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Obiecte vestimentare</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='melodii';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1526142684086-7ebd69df27a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Melodii</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='orchestranti';">
+                <div class="card h-100">
+                    <img src="https://images.pexels.com/photos/2102568/pexels-photo-2102568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Orchestranti</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='instrumente';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1551740132-1d0c02b8275e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Instrumente</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='recuzita';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/flagged/photo-1552425595-a5ff53172f75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Recuzita</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='aparitii';">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1503095396549-807759245b35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Aparitie</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='decoreaza';" >
+                <div class="card h-100">
+                    <img src="https://astanatimes.com/wp-content/uploads/2019/01/DSC7734.jpg" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Decoreaza</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mb-4" onclick="window.location='melodie_orchestrant';" >
+                <div class="card h-100">
+                    <img src="https://cms-data.nyc3.digitaloceanspaces.com/f1aa36817a7b719d8ead2297f653140f793b66f9880588856d435bf2f0252cf7-gallery.jpg" class="card-img-top" alt="...">
+                    <div class="card-body menu-card">
+                        <h5 class="card-title">Melodie_Orchestrant</h5>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
