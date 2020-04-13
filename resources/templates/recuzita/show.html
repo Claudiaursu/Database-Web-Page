@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Categorie: Recuzita</title>
+    <style th:replace="/fragments/general.html :: style"></style>
+</head>
+<body>
+<div align="center">
+    <div th:replace="/fragments/general.html :: header"> </div>
+    <h1>Recuzita opera</h1>
+    <a href="/recuzita/new">Introduceti o recuzita noua</a>
+    <br/><br/>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th>ID recuzita</th>
+                <th>Denumire</th>
+                <th>Culoare</th>
+                <th>Greutate</th>
+                <th>Inaltime</th>
+                <th>Actiuni</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="recuzita : ${listaRecuzita}">
+                <td th:text="${recuzita.id_recuzita}">Id recuzita</td>
+                <td th:text="${recuzita.denumire}">Denumire</td>
+                <td th:text="${recuzita.culoare}">Culoare</td>
+                <td th:text="${recuzita.greutate}">Greutate</td>
+                <td th:text="${recuzita.inaltime}">inaltime</td>
+                <td width="255px">
+                    <a class="text-primary"  th:href="@{'/recuzita/edit/' + ${recuzita.id_recuzita}}">Editeaza recuzita</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a class="text-danger" th:href="@{'/recuzita/delete/' + ${recuzita.id_recuzita}}">Sterge recuzita</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div th:replace="/fragments/general.html :: scripts"></div>
+</body>
+</html>
